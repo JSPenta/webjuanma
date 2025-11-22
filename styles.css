@@ -1,0 +1,65 @@
+:root{
+  --bg-1: #FDEFF9; /* pastel pink */
+  --bg-2: #F0FBFF; /* pastel blue */
+  --card: #FFFFFF;
+  --muted: #6B7280;
+  --accent: #6C63FF;
+  --radius: 12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#111827;
+  background: linear-gradient(135deg,var(--bg-1) 0%, var(--bg-2) 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:40px 20px;
+}
+
+.container{
+  max-width:920px;
+  margin:0 auto;
+  display:grid;
+  gap:18px;
+}
+
+.hero{
+  padding:28px;
+  background:transparent;
+  text-align:left;
+}
+.name{
+  margin:0;
+  font-size:1.9rem;
+  letter-spacing: -0.02em;
+}
+.role{
+  margin:6px 0 0 0;
+  color:var(--muted);
+}
+
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:var(--radius);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+
+.summary p, .experience p, .education p{margin:0 0 8px 0; color: #233142}
+.card h2{margin:0 0 10px 0; font-size:1.05rem}
+.item h3{margin:0 0 6px 0; font-size:0.98rem}
+.meta{color:var(--muted); font-size:0.9rem; margin-bottom:8px}
+
+.skills-list{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.skills-list li{background:#F6F7FF;color:var(--accent);padding:6px 10px;border-radius:999px;font-size:0.9rem}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+@media (max-width:640px){
+  .container{padding:0 6px}
+  .name{font-size:1.5rem}
+}
